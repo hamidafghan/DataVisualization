@@ -8,7 +8,7 @@ const svg4 = d3.select("#A1chart4")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Parse the Data
-d3.csv("../../DataVisualization/data/top_trees_neighborhood_stacked.csv").then(function (data) {
+d3.csv("../../DataVisualization/Data/top_trees_neighborhood_stacked.csv").then(function (data) {
 
     // List of subgroups = header of the csv files = soil condition here
     const subgroups = data.columns.slice(1);

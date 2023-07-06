@@ -16,8 +16,8 @@ var data = d3.map();
 
 // Load external data and boot
 d3.queue()
-  .defer(d3.json, "./DataVisualization/data/circoscrizioni.json")
-  .defer(d3.csv, "./DataVisualization/data/neighborhoodAbundance.csv", function (d) {
+  .defer(d3.json, "./DataVisualization/Data/circoscrizioni.json")
+  .defer(d3.csv, "./DataVisualization/Data/neighborhoodAbundance.csv", function (d) {
     data.set(d.Neighborhood, +d.Count);
   })
   .await(ready);

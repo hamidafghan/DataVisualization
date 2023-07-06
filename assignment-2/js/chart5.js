@@ -15,8 +15,8 @@ var svg5 = d3
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-// d3.csv("/DataVisualization/data/top_trees_neighborhood_unpivot_task_5_A_2.csv", function(data) {
-d3.csv("./DataVisualization/data/top_6_treesMeasuresBubble.csv", function (data) {
+// d3.csv("/DataVisualization/Data/top_trees_neighborhood_unpivot_task_5_A_2.csv", function(data) {
+d3.csv("./DataVisualization/Data/top_6_treesMeasuresBubble.csv", function (data) {
   // ---------------------------//
   //       AXIS  AND SCALE      //
   // ---------------------------//
@@ -338,7 +338,7 @@ d3.select("#treeSizeMeasures_taskA2_5").on("change", function () {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("./DataVisualization/data/top_6_treesMeasuresBubble.csv", function (data) {
+  d3.csv("./DataVisualization/Data/top_6_treesMeasuresBubble.csv", function (data) {
     // ---------------------------//
     //       AXIS  AND SCALE      //
     // ---------------------------//

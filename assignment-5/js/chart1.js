@@ -21,7 +21,7 @@ var sankey = d3.sankey()
   .size([width, height]);
 
 // load the data
-d3.json("./../../DataVisualization/data/top_10_trees_FluxChart.json", function (error, graph) {
+d3.json("./../../DataVisualization/Data/top_10_trees_FluxChart.json", function (error, graph) {
 
   console.log(graph.nodes, graph.links)
   // Constructs a new Sankey generator with the default settings.

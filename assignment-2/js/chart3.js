@@ -15,7 +15,7 @@ var svg3 = d3
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("./DataVisualization/data/top_6_treesMeasuresScatter.csv", function (data) {
+d3.csv("./DataVisualization/Data/top_6_treesMeasuresScatter.csv", function (data) {
   let selectedText_task3 = "Height (m)";
   data.forEach(function (d) {
     d[selectedText_task3] = parseFloat(d[selectedText_task3]);
@@ -277,7 +277,7 @@ d3.select("#treeSizeMeasures_taskA2_3").on("change", function () {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("./DataVisualization/data/top_6_treesMeasuresScatter.csv", function (data) {
+  d3.csv("./DataVisualization/Data/top_6_treesMeasuresScatter.csv", function (data) {
     data.forEach(function (d) {
       d[selectedText_task3] = parseFloat(d[selectedText_task3]);
       d["Gross Carbon Sequestration (kg/yr)"] = parseFloat(

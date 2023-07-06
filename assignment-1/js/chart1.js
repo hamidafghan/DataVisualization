@@ -11,7 +11,7 @@ const svg = d3.select("#A1chart1")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // Define data URL
-const dataUrl = "../../DataVisualization/data/top_20_trees.csv";
+const dataUrl = "../../DataVisualization/Data/top_20_trees.csv";
 
 // Load data
 d3.csv(dataUrl).then(function(data) {

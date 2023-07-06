@@ -1,7 +1,7 @@
 import pandas as pd
 import geopandas as gpd
 
-DATA_PATH = './DataVisualization/data/'
+DATA_PATH = './DataVisualization/Data/'
 ASSIGNMENT_PATH = "./assignment-2/data"
 
 def load_and_convert_geojson_to_dataframe(file_path):

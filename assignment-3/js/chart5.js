@@ -39,8 +39,8 @@ var tooltipA3T5 = d3
 
 // Load external data and boot
 d3.queue()
-  .defer(d3.json, "./DataVisualization/data/circoscrizioni.json")
-  .defer(d3.csv, "./DataVisualization/data/neighborhoodAbundance.csv", function (d) {
+  .defer(d3.json, "./DataVisualization/Data/circoscrizioni.json")
+  .defer(d3.csv, "./DataVisualization/Data/neighborhoodAbundance.csv", function (d) {
     data5.set(d.Neighborhood, +d.Count);
   })
   .await(ready);
@@ -129,7 +129,7 @@ function ready(error, topo) {
   ];
   var color = d3.scaleOrdinal().domain(trees).range(color_list);
 
-  d3.csv("./DataVisualization/data/mapTop_10_trees.csv", function (data) {
+  d3.csv("./DataVisualization/Data/mapTop_10_trees.csv", function (data) {
     svg5
       .selectAll("dot")
       .data(data)

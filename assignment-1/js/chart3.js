@@ -5,7 +5,7 @@ const width3 = 400 - margin3.left - margin3.right;
 const height3 = 400 - margin3.top - margin3.bottom;
 
 // Read the data
-d3.csv("/DataVisualization/data/top_trees_neighborhood_unpivot.csv").then((data) => {
+d3.csv("/DataVisualization/Data/top_trees_neighborhood_unpivot.csv").then((data) => {
   // Group the data: I want to draw one line per group
   const sumstat = d3.group(data, (d) => d.Name);
   const allKeys = Array.from(sumstat.keys());

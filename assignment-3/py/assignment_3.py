@@ -37,7 +37,7 @@ top = 5
 # load "circoscrizioni" file (neighborhoods) and create a map
 nbhs_map = {}
 nbhs_map2 = {}
-with open('./DataVisualization/data/circoscrizioni.json', 'r') as neighborhoods:
+with open('./DataVisualization/Data/circoscrizioni.json', 'r') as neighborhoods:
     nbhs = json.load(neighborhoods)
 
     for nbh in nbhs['features']:
@@ -80,12 +80,12 @@ pivot_data_stacked['Other_perc'] = pivot_data_stacked['Other'] / pivot_data_stac
 pivot_data_stacked = pivot_data_stacked.sort_values(by='Other_perc').drop(columns='Other_perc')
 
 # save into csv
-pivot_data.to_csv('./DataVisualization/data/top_trees_neighborhood.csv', index=False)
-pivot_data_stacked.to_csv('./DataVisualization/data/top_trees_neighborhood_stacked.csv', index=False)
+pivot_data.to_csv('./DataVisualization/Data/top_trees_neighborhood.csv', index=False)
+pivot_data_stacked.to_csv('./DataVisualization/Data/top_trees_neighborhood_stacked.csv', index=False)
 
 
 unpivot_data = data.groupby(by=['Neighborhood', 'Name']).sum().reset_index()
-unpivot_data.to_csv('./DataVisualization/data/top_trees_neighborhood_unpivot.csv', index=False)
+unpivot_data.to_csv('./DataVisualization/Data/top_trees_neighborhood_unpivot.csv', index=False)
 
 
 #Task 1
@@ -97,7 +97,7 @@ result1 = pd.DataFrame(zipped, columns=['Neighborhood','Count'])
 result1.to_csv(f'{DATA_PATH}/neighborhoodAbundance.csv', index=False)
 
 #Task2
-task2 = pd.read_csv('./DataVisualization/data/top_trees_neighborhood_unpivot.csv')
+task2 = pd.read_csv('./DataVisualization/Data/top_trees_neighborhood_unpivot.csv')
 gruopByNeigh = task2.groupby(by=['Neighborhood'])['Canopy Cover (m2)'].sum().reset_index()
 count = gruopByNeigh['Canopy Cover (m2)']
 zipped = list(zip(neigh, count))
@@ -126,7 +126,7 @@ area_perNeighSorted.to_csv(f'{DATA_PATH}/neighborhoodDensity.csv', index=False)
 
 
 #Task3
-task3 = pd.read_csv('./DataVisualization/data/top_trees_neighborhood_unpivot.csv')
+task3 = pd.read_csv('./DataVisualization/Data/top_trees_neighborhood_unpivot.csv')
 result_task3Ass3 = task3.groupby(by=['Neighborhood'])['Oxygen Production (kg/yr)'].sum().reset_index()
 count = result_task3Ass3['Oxygen Production (kg/yr)']
 zipped = list(zip(neigh, count))
