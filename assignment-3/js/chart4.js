@@ -1,6 +1,6 @@
 var margin = { top: 200, right: 30, bottom: 50, left: 500 };
 // The svg
-var svg4 = d3.select("#A3task4"),
+var svg4 = d3.select("#chart4"),
   width = +svg4.attr("width") - margin.left - margin.right,
   height = +svg4.attr("height") - margin.top - margin.bottom;
 
@@ -24,7 +24,7 @@ let colorScale4 = d3
   .range(d3.schemeGreens[7]);
 
 var tooltipA3T4 = d3
-  .select("#A3task4Div")
+  .select("#chart4Div")
   .append("div")
   .style("background-color", "white")
   .style("border", "solid")

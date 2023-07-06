@@ -1,6 +1,6 @@
 var margin = { top: 200, right: 30, bottom: 50, left: 500 };
 // The svg
-var svg1 = d3.select("#A3task1"),
+var svg1 = d3.select("#chart1"),
   width = +svg1.attr("width") - margin.left - margin.right,
   height = +svg1.attr("height") - margin.top - margin.bottom;
 
@@ -27,7 +27,7 @@ Legend(
     [50, 100, 300, 500, 1000, 2000, 3000],
     d3v6.schemeGreens[8]
   ),
-  "#A3task1_legend"
+  "#chart1_legend"
 );
 
 // Data and color scale
@@ -37,7 +37,7 @@ let colorScale1 = d3
   .range(d3.schemeGreens[8]);
 
 var tooltipA3T1 = d3
-  .select("#A3task1Div")
+  .select("#chart1Div")
   .append("div")
   .style("background-color", "white")
   .style("border", "solid")

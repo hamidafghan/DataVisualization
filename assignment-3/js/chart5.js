@@ -1,6 +1,6 @@
 var margin = { top: 200, right: 30, bottom: 50, left: 500 };
 // The svg
-var svg5 = d3.select("#A3task5"),
+var svg5 = d3.select("#chart5"),
   width = +svg5.attr("width") - margin.left - margin.right,
   height = +svg5.attr("height") - margin.top - margin.bottom;
 
@@ -25,7 +25,7 @@ let colorScale5 = d3
   .range(d3.schemeGreens[7]);
 
 var tooltipA3T5 = d3
-  .select("#A3task5Div")
+  .select("#chart5Div")
   .append("div")
   .style("background-color", "white")
   .style("border", "solid")
@@ -151,7 +151,7 @@ function ready(error, topo) {
   });
 
   var legend = d3
-    .select("#task5Ass2_legend")
+    .select("#chart5_legend")
     .append("svg")
     // .attr("viewBox", `0 0 50 50`)
     .attr("width", 300)

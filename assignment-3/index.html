@@ -26,89 +26,85 @@
         </div>
     </div>
 
+    <!-- The charts are here -->
+    <div class="mx-auto max-w-7xl text-center py-16">
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" id="assignm3PageContent">
 
-            <!-- Header -->
-        <header class="w3-container" id="assignm3Title">
-            <h1><b>Assignment 3 - Maps</b></h1>
-        </header>
-
-        <br>
-        <br>
-        <h2><b>Tree Abundance per Neighborhood</b></h2>
-        <h4>The first map of the Trento's circoscrizioni shows the different tree abundance <br> (total number of trees)
-            inside each region. <br>
-            The increasing of the intensity of green scale color follows the increasing of the tree abundance.
-        </h4>
-        <div class="map-container" id="A3task1Div">
-            <svg id="A3task1" width="900" height="600"></svg>
-            <svg id="A3task1_legend" width="900"></svg>
-            <p><i>Map of Trento's circoscrizioni </i></p>
+        <!-- First Chart -->
+        <div class="py-16">
+            <h2 class="font-bold text-2xl">Tree Abundance per Neighborhood</h2>
+            <p class="mt-4">
+                The first map of the Trento's circoscrizioni shows the different tree abundance <br> (total number of trees)
+                inside each region. <br>
+                The increasing of the intensity of green scale color follows the increasing of the tree abundance.
+            </p>
+            <div id="chart1Div" class="flex flex-col items-center">
+                <svg id="chart1" width="900" height="600"></svg>
+                <svg id="chart1_legend" width="900"></svg>
+            </div>
         </div>
 
-        <br>
-        <hr>
-        <br>
 
-        <h2><b>Tree Density per Neighborhood</b></h2>
-        <h4>
-            The second map of the Trento's circoscrizioni shows instead the different tree density <br> (total canopy
-            cover
-            of a region divided by the area of the same region) inside each region. <br>
-            The increasing of the intensity of green scale color follows the increasing of the tree density.
-        </h4>
-        <div class="map-container" id="A3task2Div">
-            <svg id="A3task2" width="900" height="600"></svg>
-            <svg id="A3task2_legend" width="900"></svg>
-            <p><i>Map of Trento's circoscrizioni </i></p>
-        </div>
-        <br>
-        <hr>
-        <br>
-
-        <h2><b>Oxygen Production per Neighborhood</b></h2>
-        <h4>
-            In this third map of the Trento's circoscrizioni we are able to see the different tree oxygen production
-            <br>
-            (measured in kg per year) inside each region. <br>
-            The increasing of the intensity of blue scale color follows the increasing of the tree oxygen production.
-        </h4>
-        <div class="map-container" id="A3task3Div">
-            <svg id="A3task3" width="900" height="600"></svg>
-            <svg id="A3task3_legend" width="900"></svg>
-            <p><i>Map of Trento's circoscrizioni </i></p>
-        </div>
-        <hr>
-        <br>
-
-        <h2><b>Tree Dot Density Map </b></h2>
-        <h4>
-            This map of the Trento's circoscrizioni displays the location <br> (dots inside the map) of all the trees in
-            Trento's city
-
-        </h4>
-        <div class="map-container" id="A3task4Div">
-            <svg id="A3task4" width="900" height="600"></svg>
-            <p><i>Map of Trento's circoscrizioni </i></p>
+        <!-- Second Chart -->
+        <div class="py-16">
+            <h2 class="font-bold text-2xl">Tree Density per Neighborhood</h2>
+            <p class="mt-4">
+                The second map of the Trento's circoscrizioni shows instead the different tree density <br> (total canopy
+                cover of a region divided by the area of the same region) inside each region. <br>
+                The increasing of the intensity of green scale color follows the increasing of the tree density.
+            </p>
+            <div id="chart2Div" class="flex flex-col items-center">
+                <svg id="chart2" width="900" height="600"></svg>
+                <svg id="chart2_legend" width="900"></svg>
+            </div>
         </div>
 
-        <hr>
-        <br>
 
-        <h2><b>Top Tree Dot Density Map</b></h2>
-        <h4>
-            This map of the Trento's circoscrizioni displays the location (dots inside the map) <br> of the top 10 trees
-            (in
-            terms of abundance) in Trento's city
-        </h4>
-        <div class="map-container" id="A3task5Div">
-            <div id="task5Ass2_legend"></div>
-            <svg id="A3task5" width="900" height="600"></svg>
-            <p><i>Map of Trento's circoscrizioni </i></p>
+        <!-- Third chart -->
+        <div class="my-16">
+            <h2 class="font-bold text-2xl">Oxygen Production per Neighborhood</h2>
+            <p class="mt-4">
+                In this third map of the Trento's circoscrizioni we are able to see the different tree oxygen production
+                <br>
+                (measured in kg per year) inside each region. <br>
+                The increasing of the intensity of blue scale color follows the increasing of the tree oxygen production.
+            </p>
+            <div id="chart3Div" class="flex flex-col items-center">
+                <svg id="chart3" width="900" height="600"></svg>
+                <svg id="chart3_legend" width="900"></svg>
+            </div>
+        </div>
+
+
+        <!-- Fourth chart -->
+        <div class="my-16">
+            <h2 class="font-bold text-2xl">Tree Dot Density Map </h2>
+            <p class="mt-4">
+                This map of the Trento's circoscrizioni displays the location <br> (dots inside the map) of all the trees in
+                Trento's city
+            </p>
+            <div id="chart4Div" class="flex flex-col items-center">
+                <svg id="chart4" width="900" height="600"></svg>
+                <svg id="chart4_legend" width="900"></svg>
+            </div>
+        </div>
+
+
+        <!-- Fifth chart -->
+        <div class="mt-16">
+            <h2 class="font-bold text-2xl">Top Tree Dot Density Map</h2>
+            <p class="mt-4">
+                This map of the Trento's circoscrizioni displays the location (dots inside the map) <br> of the top 10 trees
+                (in
+                terms of abundance) in Trento's city
+            </p>
+            <div id="chart5Div" class="flex items-center">
+                <svg id="chart5" width="900" height="600"></svg>
+                <div id="chart5_legend"></div>
+            </div>
         </div>
     </div>
+
 
     <div id="footer"></div>
 
