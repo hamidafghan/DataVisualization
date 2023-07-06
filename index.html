@@ -37,7 +37,8 @@
                 <a href="/assignment-5/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 5</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="https://github.com/salah-ismail93/DataVisualization/" target="_blank" class="text-sm font-semibold leading-6 text-gray-900">
+                <a href="https://github.com/salah-ismail93/DataVisualization/" target="_blank"
+                    class="text-sm font-semibold leading-6 text-gray-900">
                     Github
                     <spanaria-hidden="true">&rarr;</span>
                 </a>
@@ -128,7 +129,8 @@
                                 class="flex w-full items-start justify-between text-left text-gray-900"
                                 aria-controls="faq-0" aria-expanded="false">
                                 <span class="text-base font-semibold leading-7">Assignment 1</span>
-                                <span class="ml-6 flex h-7 items-center text-4xl" @click="open=!open" x-html="open ? '-' :'+' ">
+                                <span class="ml-6 flex h-7 items-center text-4xl" @click="open=!open"
+                                    x-html="open ? '-' :'+' ">
                                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
@@ -175,8 +177,60 @@
                             <button type="button"
                                 class="flex w-full items-start justify-between text-left text-gray-900"
                                 aria-controls="faq-0" aria-expanded="false">
+                                <span class="text-base font-semibold leading-7">Assignment 2</span>
+                                <span class="ml-6 flex h-7 items-center text-4xl" @click="open=!open"
+                                    x-html="open ? '-' :'+' ">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                    </svg>
+                                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="open" x-cloak class="mt-2 pr-12" id="faq-0">
+                            <p class="text-base leading-7 text-gray-600">
+                                For the second assignment, we need to visualize the distribution of four size measures
+                                for trees: height, crown width, canopy cover, and crown height. We can choose the
+                                measure using a dropdown menu. The five charts we created are:
+                            </p>
+                            <p class="text-base leading-7 text-gray-600 mt-3">
+                                The first chart, the histogram, visualizes the distribution of size measures for all
+                                tree species.The second chart, the box plot, provides an overview of the distribution of
+                                size measures, highlighting outliers and density.
+                            </p>
+                            <p class="text-base leading-7 text-gray-600 mt-3">
+                                The third chart, the correlation plot, demonstrates the relationship between CO2
+                                production and size measures specifically for the top 5 tree types.
+                            </p>
+                            <p class="text-base leading-7 text-gray-600 mt-3">
+                                The fourth chart, the small multiples, shows individual correlations between CO2
+                                production and size measures for each tree type using scatter plots.
+                            </p>
+                            <p class="text-base leading-7 text-gray-600 mt-3">
+                                Lastly, the fifth chart, the bubble chart, illustrates the correlation between size
+                                measures, CO2 production, and canopy size for the top 6 tree types, with bubble size
+                                indicating canopy size.
+                            </p>
+                            <p class="text-base leading-7 text-gray-600 mt-5">
+                                <a href="./assignment-2/" class="text-sm leading-6 text-gray-900">
+                                    Assignment 2
+                                    <spanaria-hidden="true">&rarr;</span>
+                                </a>
+                            </p>
+                        </dd>
+                    </div>
+                    <div class="pt-6" x-data="{open:false}">
+                        <dt>
+                            <button type="button"
+                                class="flex w-full items-start justify-between text-left text-gray-900"
+                                aria-controls="faq-0" aria-expanded="false">
                                 <span class="text-base font-semibold leading-7">Assignment 4</span>
-                                <span class="ml-6 flex h-7 items-center text-4xl" @click="open=!open" x-html="open ? '-' :'+' ">
+                                <span class="ml-6 flex h-7 items-center text-4xl" @click="open=!open"
+                                    x-html="open ? '-' :'+' ">
                                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
@@ -221,7 +275,8 @@
                 <div class="space-y-8">
                     <p class="text-sm leading-6 text-gray-600">Data Virtualization - 2022</p>
                     <div class="flex space-x-6">
-                        <a href="https://github.com/salah-ismail93/DataVisualization/" class="text-gray-400 hover:text-gray-500">
+                        <a href="https://github.com/salah-ismail93/DataVisualization/"
+                            class="text-gray-400 hover:text-gray-500">
                             <span class="sr-only">GitHub</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
