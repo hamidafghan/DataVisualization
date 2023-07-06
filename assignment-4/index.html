@@ -34,11 +34,11 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="./assignment-1/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 1</a>
-                <a href="./assignment-2/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 2</a>
-                <a href="./assignment-3/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 3</a>
-                <a href="./assignment-4/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 4</a>
-                <a href="./assignment-5/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 5</a>
+                <a href="/assignment-1/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 1</a>
+                <a href="/assignment-2/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 2</a>
+                <a href="/assignment-3/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 3</a>
+                <a href="/assignment-4/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 4</a>
+                <a href="/assignment-5/" class="text-sm font-semibold leading-6 text-gray-900">Assignment 5</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="https://github.com/salah-ismail93/DataVisualization/" target="_blank" class="text-sm font-semibold leading-6 text-gray-900">
@@ -65,19 +65,19 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="./assignment-1/"
+                            <a href="/assignment-1/"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Assignment
                                 1</a>
-                            <a href="./assignment-2/"
+                            <a href="/assignment-2/"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Assignment
                                 2</a>
-                            <a href="./assignment-3/"
+                            <a href="/assignment-3/"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Assignment
                                 3</a>
-                            <a href="./assignment-4/"
+                            <a href="/assignment-4/"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Assignment
                                 4</a>
-                            <a href="./assignment-5/"
+                            <a href="/assignment-5/"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Assignment
                                 5</a>
                         </div>
@@ -94,7 +94,7 @@
     <!--  About the team and project  -->
     <div class="bg-white px-6 lg:px-8 py-32">
         <div class="mx-auto max-w-5xl text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Assignment 1 - timelines</h2>
+            <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Assignment 4 - Timelines</h2>
             
         </div>
     </div>
@@ -102,10 +102,22 @@
     <!-- The charts are here -->
     <div class="bg-white px-6 lg:px-8 text-center">
         <div class="mx-auto max-w-5xl">
-            <p class="mt-4 text-base leading-7 text-indigo-600 sm:text-2xl">Most Observed Trees</p>
+            <p class="mt-4 text-base leading-7 text-indigo-600 sm:text-2xl">Line Chart of Temperatures over a year</p>
             <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-600 text-center">
-                The municipality of Trento boasts a wide variety of the top 20 tree species, with each bar in the graph displaying the average canopy size (in square meters) when hovered over.
+                Temperature data and visualizations for Salorno, including the display of minimum, maximum, and mean temperatures for a selected year, a line chart showcasing monthly temperature trends over seven years, and a temperature chart specific to Salorno.
             </p>
+
+            <label for="yearsA4T1">Choose Year:</label>
+            <select name="yearsA4T1" id="yearsA4T1">
+                <option value="2021" selected>2021</option>
+                <option value="2017">2017</option>
+                <option value="2013">2013</option>
+                <option value="2009">2009</option>
+                <option value="2005">2005</option>
+                <option value="2001">2001</option>
+                <option value="1997">1997</option>
+                <option value="1993">1993</option>
+            </select>
             <div class="flex justify-center py-3" id="A4chart1">
                 <div class="tooltip A4chart1Inner"></div>
             </div>
@@ -182,10 +194,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="./js/chart1.js"></script>
-<script src="./js/chart2.js"></script>
-<script src="./js/chart3.js"></script>
-<script src="./js/chart4.js"></script>
-<script src="./js/chart5.js"></script>
 </body>
 
 </html>
