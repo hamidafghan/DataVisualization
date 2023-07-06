@@ -1,16 +1,16 @@
 // set the dimensions and margins of the graph
-var margin = { top: 30, right: 30, bottom: 50, left: 260 },
+var margin = { top: 30, right: 30, bottom: 0, left: 260 },
   width = 800 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg2 = d3
-  .select("#A2task2")
+  .select("#chart2")
   .append("svg")
   .attr("id", "the_SVG_ID_taskA2_2")
   // .attr("width", width + margin.left + margin.right)
   // .attr("height", height + margin.top + margin.bottom)
-  .attr("viewBox", `0 0 800 600`)
+  .attr("viewBox", `0 0 800 510`)
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -180,7 +180,7 @@ d3.csv("./data/top_6_treesMeasures.csv", function (data) {
 
   // create a tooltip
   var tooltipA2T2 = d3
-    .select("#A2task2")
+    .select("#chart2")
     .append("div")
     .style("background-color", "white")
     .style("border", "solid")
@@ -245,7 +245,7 @@ d3.select("#treeSizeMeasures_for_taskA2_2").on("change", function () {
   d3.select("#the_SVG_ID_taskA2_2").remove();
   // append the svg object to the body of the page
   var svg2_new = d3
-    .select("#A2task2")
+    .select("#chart2")
     .append("svg")
     .attr("id", "the_SVG_ID_taskA2_2")
     // .attr("width", width + margin.left + margin.right)
@@ -423,7 +423,7 @@ d3.select("#treeSizeMeasures_for_taskA2_2").on("change", function () {
 
     // create a tooltip
     var tooltipA2T2 = d3
-      .select("#A2task2")
+      .select("#chart2")
       .append("div")
       .style("background-color", "white")
       .style("border", "solid")

@@ -26,7 +26,7 @@ d3.csv("./data/top_6_treesMeasuresSmallMulti.csv", function (data) {
 
   // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
   var svg4 = d3
-    .select("#A2task4")
+    .select("#chart4")
 
     .selectAll("dot")
     .data(sumstat)
@@ -108,7 +108,7 @@ d3.csv("./data/top_6_treesMeasuresSmallMulti.csv", function (data) {
   // Tooltip for all the bars
 
   var tooltipA2T4 = d3
-    .select("#A2task4")
+    .select("#chart4")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -280,7 +280,7 @@ d3.select("#treeSizeMeasures_taskA2_4").on("change", function () {
 
     // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
     var svg4_new = d3
-      .select("#A2task4")
+      .select("#chart4")
       .selectAll("dot")
       .data(sumstat)
       .enter()
@@ -359,7 +359,7 @@ d3.select("#treeSizeMeasures_taskA2_4").on("change", function () {
     // Tooltip for all the bars
 
     var tooltipA2T4 = d3
-      .select("#A2task4")
+      .select("#chart4")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")

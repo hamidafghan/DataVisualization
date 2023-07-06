@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
+    <title>Assignment 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <!-- Tailwind css styles -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/app/css/app.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -18,112 +18,136 @@
     <div id="header"></div>
 
     <!--  About the team and project  -->
-    <div class="bg-white px-6 lg:px-8 py-32">
+    <div class="bg-white px-6 lg:px-8 py-16">
         <div class="mx-auto max-w-5xl text-center">
             <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Assignment 2 - Distribution
             </h2>
-
         </div>
     </div>
 
     <!-- The charts are here -->
-    <div class="w3-row-padding w3-margin-bottom">
-        <br>
-        <h2><b>Trees Size Distributions</b></h2>
-        <h4>
-            The selected size distributions of the top 6 tree species present in the municipality of Trento.
-            <br>It is also possible to change the number of the histogram's bins.
-        </h4>
-        <label for="treeSizeMeasures">Choose Tree measure:</label>
-        <select name="treeSizeMeasures" id="treeSizeMeasures_for_taskA2_1">
-            <option value="Height (m)" selected>Height (m)</option>
-            <option value="Crown Width (m)">Crown Width (m)</option>
-            <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
-            <option value="Crown Height (m)">Crown Height (m)</option>
-        </select>
-        <br>
-        <br>
-        <label># Bins:</label>
-        <input type="number" min="1" max="" step="30" value="111" id="nBin" autocomplete="off">
-        <div class="task-container" id="A2task1"></div>
+    <div class="mx-auto max-w-7xl text-center py-16">
 
-        <hr>
-        <br>
 
-        <h2><b>Spread and Skewness of Tree Size Distribution</b></h2>
-        <h4>
-            The selected size distributions of the top 6 tree species visualized by
-            box plots <br> to show spread and skewness of the tree size,<br>giving information on minima, maxima
-            (outliers) and
-            means.
-        </h4>
-        <!-- <div class="task-container" id="task_2_legend"></div> -->
-        <label for="treeSizeMeasures">Choose Tree measure:</label>
-        <select name="treeSizeMeasures" id="treeSizeMeasures_for_taskA2_2">
-            <option value="Height (m)" selected>Height (m)</option>
-            <option value="Crown Width (m)">Crown Width (m)</option>
-            <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
-            <option value="Crown Height (m)">Crown Height (m)</option>
-        </select>
-        <div class="task-container" id="A2task2"></div>
-        <hr>
-        <br>
+        <!-- First Chart -->
+        <div class="py-16">
+            <h2 class="font-bold text-2xl">Trees Size Distributions</h2>
+            <p class="mt-4">
+                The size distributions of the top 6 tree species in Trento municipality can be represented by a histogram with adjustable bin numbers.
+            </p>
+            <div class="py-3">
+                <div class="my-3">
+                    <label for="treeSizeMeasures">Choose Tree measure:</label>
+                    <select name="treeSizeMeasures" id="treeSizeMeasures_for_taskA2_1">
+                        <option value="Height (m)" selected>Height (m)</option>
+                        <option value="Crown Width (m)">Crown Width (m)</option>
+                        <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
+                        <option value="Crown Height (m)">Crown Height (m)</option>
+                    </select>
+                </div>
 
-        <h2><b>Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</b></h2>
-        <h4>
-            Scatter plot visualizing the correlation between the selected size of the too 6 tree types and the
-            CO<sup>2</sup> efficiency <br>
-            The efficiency can be measured in CO<sup>2</sup> capturing capacity, measured in kg/yr <br>
-        </h4>
-        <label for="treeSizeMeasures_taskA2_3">Choose Tree measure:</label>
-        <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_3">
-            <option value="Height (m)" selected>Height (m)</option>
-            <option value="Crown Width (m)">Crown Width (m)</option>
-            <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
-            <option value="Crown Height (m)">Crown Height (m)</option>
-        </select>
-        <br>
-        <br>
-        <div class="task-container" id="A2task3"></div>
-        <hr>
-        <br>
+                <div class="my-3">
+                    <label># Bins:</label>
+                    <input type="number" min="1" max="" step="30" value="111" id="nBin" autocomplete="off">
+                </div>
+            </div>
+            <div id="chart1"></div>
+        </div>
 
-        <h2><b>Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</b></h2>
-        <h4>
-            Each of the top 6 tree types scatter plot visualizes again the correlation between the selected measure,
-            <br>
-            for a specific tree type, and the CO<sup>2</sup> capturing capacity (kg/yr) <br>
 
-        </h4>
-        <label for="treeSizeMeasures">Choose Tree measure:</label>
-        <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_4">
-            <option value="Height (m)" selected>Height (m)</option>
-            <option value="Crown Width (m)">Crown Width (m)</option>
-            <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
-            <option value="Crown Height (m)">Crown Height (m)</option>
-        </select>
-        <div id="A2task4"></div>
-        <hr>
-        <br>
+        <!-- Second Chart -->
+        <div class="py-16">
+            <h2 class="font-bold text-2xl">Spread and Skewness of Tree Size Distribution</h2>
+            <p class="mt-4">
+                The selected size distributions of the top 6 tree species visualized by box plots to show spread and skewness of the tree size, 
+                <br/> giving information on minima, maxima (outliers), and means.
+            </p>
+            <div class="py-3">
+                <div class="my-3">
+                    <label for="treeSizeMeasures_for_taskA2_2">Choose Tree measure:</label>
+                    <select name="treeSizeMeasures" id="treeSizeMeasures_for_taskA2_2">
+                        <option value="Height (m)" selected>Height (m)</option>
+                        <option value="Crown Width (m)">Crown Width (m)</option>
+                        <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
+                        <option value="Crown Height (m)">Crown Height (m)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="chart2"></div>
+        </div>
 
-        <h2><b>Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</b></h2>
-        <h4>
-            Also this bubble chart shows the correlation between the selected tree size of the top 6 tree types <br>
-            and CO<sup>2</sup> capturing capacity (kg/yr). <br>
-            The bubbles' size referres to the canopy cover (m2) of the associated tree type.
-        </h4>
-        <label for="treeSizeMeasures_taskA2_5">Choose Tree measure:</label>
-        <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_5">
-            <option value="Height (m)">Height (m)</option>
-            <option value="Crown Width (m)">Crown Width (m)</option>
-            <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
-            <option value="Crown Height (m)">Crown Height (m)</option>
-        </select>
-        <div class="task-container" id="A2task5"></div>
+
+        <!-- Third chart -->
+        <div class="my-16">
+            <h2 class="font-bold text-2xl">Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</h2>
+            <p class="mt-4">
+                Scatter plot visualizing the correlation between the selected size of the too 6 tree types and the
+                CO<sup>2</sup> efficiency <br>
+                The efficiency can be measured in CO<sup>2</sup> capturing capacity, measured in kg/yr <br>
+            </p>
+            <div class="py-3">
+                <div class="my-3">
+                    <label for="treeSizeMeasures_taskA2_3">Choose Tree measure:</label>
+                    <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_3">
+                        <option value="Height (m)" selected>Height (m)</option>
+                        <option value="Crown Width (m)">Crown Width (m)</option>
+                        <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
+                        <option value="Crown Height (m)">Crown Height (m)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="chart3"></div>
+        </div>
+
+
+        <!-- Fourth chart -->
+        <div class="my-16">
+            <h2 class="font-bold text-2xl">Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</h2>
+            <p class="mt-4">
+                Each of the top 6 tree types scatter plot visualizes again the correlation between the selected measure,
+                <br>for a specific tree type, and the CO<sup>2</sup> capturing capacity (kg/yr)
+            </p>
+            <div class="py-3">
+                <div class="my-3">
+                    <label for="treeSizeMeasures">Choose Tree measure:</label>
+                    <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_4">
+                        <option value="Height (m)" selected>Height (m)</option>
+                        <option value="Crown Width (m)">Crown Width (m)</option>
+                        <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
+                        <option value="Crown Height (m)">Crown Height (m)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="chart4" class="grid grid-cols-3 justify-items-center"></div>
+        </div>
+
+
+        <!-- Fifth chart -->
+        <div class="mt-16">
+            <h2 class="font-bold text-2xl">Correlation of Tree Size and CO<sup>2</sup> Capturing Capacity</h2>
+            <p class="mt-4">
+                Also this bubble chart shows the correlation between the selected tree size of the top 6 tree types <br>
+                and CO<sup>2</sup> capturing capacity (kg/yr). <br>
+                The bubbles' size referres to the canopy cover (m2) of the associated tree type.
+            </p>
+            <div class="py-3">
+                <div class="my-3">
+                    <label for="treeSizeMeasures_taskA2_5">Choose Tree measure:</label>
+                    <select name="treeSizeMeasures" id="treeSizeMeasures_taskA2_5">
+                        <option value="Height (m)">Height (m)</option>
+                        <option value="Crown Width (m)">Crown Width (m)</option>
+                        <option value="Canopy Cover (m2)">Canopy Cover (m2)</option>
+                        <option value="Crown Height (m)">Crown Height (m)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="chart5"></div>
+        </div>
     </div>
 
     <div id="footer"></div>
 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="/app/js/app.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.js"></script>
