@@ -15,7 +15,7 @@ var svg2 = d3
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Read the data and compute summary statistics for each specie
-d3.csv("./data/top_6_treesMeasures.csv", function (data) {
+d3.csv("./DataVisualization/data/top_6_treesMeasures.csv", function (data) {
   data.forEach(function (d) {
     d["Height (m)"] = parseFloat(d["Height (m)"]);
   });
@@ -254,7 +254,7 @@ d3.select("#treeSizeMeasures_for_taskA2_2").on("change", function () {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("./data/top_6_treesMeasures.csv", function (data) {
+  d3.csv("./DataVisualization/data/top_6_treesMeasures.csv", function (data) {
     data.forEach(function (d) {
       d[selectedText_task2] = parseFloat(d[selectedText_task2]);
     });

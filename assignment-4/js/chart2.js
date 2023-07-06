@@ -137,7 +137,7 @@ svgA4T2.selectAll("mylabels")
 
 
 
-d3.csv("../../data/daily_temp_data.csv",
+d3.csv("../../DataVisualization/data/daily_temp_data.csv",
 
     function (d) {
         return {

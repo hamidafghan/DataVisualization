@@ -75,7 +75,7 @@ svgA4T3.selectAll("mylabels")
   .on("mouseleave", noHighlight)
 
 //read data
-d3.csv("../../data/pivot_data_max_year_2021.csv").then((data) => {
+d3.csv("../../DataVisualization/data/pivot_data_max_year_2021.csv").then((data) => {
     // Get the different categories and count them
   
     var categories = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -161,7 +161,7 @@ d3.csv("../../data/pivot_data_max_year_2021.csv").then((data) => {
     console.error(err);
 });
 
-d3.csv("../../data/pivot_data_min_year_2021.csv").then((data) => {
+d3.csv("../../DataVisualization/data/pivot_data_min_year_2021.csv").then((data) => {
     // Get the different categories and count them
 
     var categories = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -323,7 +323,7 @@ d3.select("#yearsA4T3").on("change", function () {
     .on("mouseover", highlight)
     .on("mouseleave", noHighlight)
 
-    d3.csv(`../../data/pivot_data_max_year_${selectedYear}.csv`).then((data) => {
+    d3.csv(`../../DataVisualization/data/pivot_data_max_year_${selectedYear}.csv`).then((data) => {
         // Get the different categories and count them
         var categories = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         var n = categories.length
@@ -403,7 +403,7 @@ d3.select("#yearsA4T3").on("change", function () {
         console.error(err);
     });
 
-    d3.csv(`../../data/pivot_data_min_year_${selectedYear}.csv`).then((data) => {
+    d3.csv(`../../DataVisualization/data/pivot_data_min_year_${selectedYear}.csv`).then((data) => {
         // Get the different categories and count them
 
         var categories = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]

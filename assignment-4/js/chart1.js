@@ -15,7 +15,7 @@ var svg1 = d3.select("#A4chart1")
 const categories = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 //Read the data
-d3.csv("../../data/daily_temp_data.csv",
+d3.csv("../../DataVisualization/data/daily_temp_data.csv",
 
 
     // When reading the csv, I must format variables:
@@ -287,7 +287,7 @@ d3.select("#yearsA4T1").on("change", function () {
             "translate(" + margin.left + "," + margin.top + ")");
 
 
-    d3.csv("../../data/daily_temp_data.csv",
+    d3.csv("../../DataVisualization/data/daily_temp_data.csv",
 
         // When reading the csv, I must format variables:
         function (d) {

@@ -47,7 +47,7 @@ tree_map = {
 
 // Create a function to generate the waffle chart for a given neighborhood
 function generateWaffleChart(neighborhood) {
-  d3.csv(`/data/top_trees_${neighborhood}.csv`).then((data) => {
+  d3.csv(`/DataVisualization/data/top_trees_${neighborhood}.csv`).then((data) => {
     theData = []
 
     //total
@@ -130,7 +130,7 @@ for (nbh in neighborhoods) {
   generateWaffleChart(nbh);
 }
 
-d3.csv(`/data/top_trees_ARGENTARIO.csv`).then((data) => {
+d3.csv(`/DataVisualization/data/top_trees_ARGENTARIO.csv`).then((data) => {
 
   //add legend with categorical data
   var legend = d3.select("#chart_5_legend")

@@ -12,7 +12,7 @@ var svgChart1 = d3
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("./data/treesMeasures.csv", function (data) {
+d3.csv("./DataVisualization/data/treesMeasures.csv", function (data) {
   var size = data.length;
   var defaultBins = Math.floor(Math.sqrt(size));
   var x = d3
@@ -104,7 +104,7 @@ d3.select("#treeSizeMeasures_for_taskA2_1").on("change", function () {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("./data/treesMeasures.csv", function (data) {
+  d3.csv("./DataVisualization/data/treesMeasures.csv", function (data) {
     var size = data.length;
     var defaultBins = Math.floor(Math.sqrt(size));
     // X axis: scale and draw:
