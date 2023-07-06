@@ -2,7 +2,7 @@ var margin3 = { top: 30, right: 0, bottom: 150, left: 110 },
   width3 = 500 - margin3.left - margin3.right,
   height3 = 500 - margin3.top - margin3.bottom;
 //Read the data
-d3.csv("./DataVisualization/Data/top_6_treesMeasuresSmallMulti.csv", function (data) {
+d3.csv("/DataVisualization/Data/top_6_treesMeasuresSmallMulti.csv", function (data) {
   data.forEach(function (d) {
     d["Height (m)"] = parseFloat(d["Height (m)"]);
     d["Gross Carbon Sequestration (eur/yr)"] = parseFloat(
@@ -255,7 +255,7 @@ d3.select("#treeSizeMeasures_taskA2_4").on("change", function () {
     width3 = 500 - margin.left - margin.right,
     height3 = 500 - margin.top - margin.bottom;
 
-  d3.csv("./DataVisualization/Data/top_6_treesMeasuresSmallMulti.csv", function (data) {
+  d3.csv("/DataVisualization/Data/top_6_treesMeasuresSmallMulti.csv", function (data) {
     $(".SVG4_ID").remove();
     data.forEach(function (d) {
       d[selectedText_task4] = parseFloat(d[selectedText_task4]);

@@ -108,7 +108,7 @@ function ready4(error, topo) {
     .on("mousemove", mouseMove)
     .on("mouseleave", mouseLeave);
 
-  d3.csv("./DataVisualization/Data/geo_data_trees.csv", function (data) {
+  d3.csv("/DataVisualization/Data/geo_data_trees.csv", function (data) {
     svg4
       .selectAll("dot")
       .data(data)

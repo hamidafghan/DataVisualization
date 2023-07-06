@@ -129,7 +129,7 @@ function ready(error, topo) {
   ];
   var color = d3.scaleOrdinal().domain(trees).range(color_list);
 
-  d3.csv("./DataVisualization/Data/mapTop_10_trees.csv", function (data) {
+  d3.csv("/DataVisualization/Data/mapTop_10_trees.csv", function (data) {
     svg5
       .selectAll("dot")
       .data(data)
