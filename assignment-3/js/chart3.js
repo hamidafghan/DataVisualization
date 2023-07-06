@@ -47,8 +47,8 @@ var tooltipA3T3 = d3
 
 // Load external data and boot
 d3.queue()
-  .defer(d3.json, "./DataVisualization/Data/circoscrizioni.json")
-  .defer(d3.csv, "./DataVisualization/Data/neighborhoodOxygenProd.csv", function (d) {
+  .defer(d3.json, "/Datavisualization/Data/circoscrizioni.json")
+  .defer(d3.csv, "/Datavisualization/Data/neighborhoodOxygenProd.csv", function (d) {
     data3.set(d.Neighborhood, +d["Oxygen Production (kg/yr)"]);
   })
   .await(ready3);
