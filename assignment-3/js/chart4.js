@@ -38,8 +38,8 @@ var tooltipA3T4 = d3
 
 // Load external data and boot
 d3.queue()
-  .defer(d3.json, "/Datavisualization/Data/circoscrizioni.json")
-  .defer(d3.csv, "/Datavisualization/Data/neighborhoodAbundance.csv", function (d) {
+  .defer(d3.json, "/DataVisualization/Data/circoscrizioni.json")
+  .defer(d3.csv, "/DataVisualization/Data/neighborhoodAbundance.csv", function (d) {
     data4.set(d.Neighborhood, +d.Count);
   })
   .await(ready4);
